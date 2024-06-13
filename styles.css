@@ -40,6 +40,22 @@ h1 {
     color: #333;
 }
 
+/* Animated quotes */
+.animated-quotes {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    animation: quotesAnimation 10s infinite;
+}
+
+@keyframes quotesAnimation {
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    50% { opacity: 1; }
+    75% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
 /* Button styling */
 .btn {
     background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
@@ -70,7 +86,7 @@ h1 {
 
 .link {
     display: inline-block;
-    width: 200px;
+    width: 250px;
     margin: 10px;
     padding: 15px;
     background: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
@@ -78,6 +94,11 @@ h1 {
     text-decoration: none;
     border-radius: 25px;
     transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 18px;
+}
+
+.link i {
+    margin-right: 10px;
 }
 
 .link:hover {
