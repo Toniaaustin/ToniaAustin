@@ -9,13 +9,14 @@ let currentQuoteIndex = 0;
 
 function changeQuote() {
     const quoteElement = document.querySelector('.animated-quotes');
-    quoteElement.style.opacity = 0;
+    quoteElement.classList.add('fade-out');
 
     setTimeout(() => {
         currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
         quoteElement.textContent = quotes[currentQuoteIndex];
-        quoteElement.style.opacity = 1;
+        quoteElement.classList.remove('fade-out');
+        quoteElement.classList.add('fade-in');
     }, 1000); // Duration should match the CSS opacity transition
 }
 
-setInterval(changeQuote, 5000); // Change quote every 5 seconds
+setInterval(changeQuote, 7000); // Change quote every 7 seconds
